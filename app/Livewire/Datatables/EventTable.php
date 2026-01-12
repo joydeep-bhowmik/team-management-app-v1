@@ -1,0 +1,56 @@
+<?php
+
+namespace App\Livewire\Datatables;
+
+use App\Models\Event;
+use JoydeepBhowmik\LivewireDatatable\Datatable;
+
+class EventTable extends Datatable
+{
+    public $model = Event::class;
+
+    public function mount()
+    {
+        $this->setup();
+    }
+
+    public function table()
+    {
+        // table method must return an array
+        return [
+
+            $this->field('Edit')
+                ->value(function ($row) {
+                    $link = route('events.edit', $row->id);
+                    return <<<HTML
+                <a x-navigate href="$link">
+                <svg class='size-6' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M15.7279 9.57627L14.3137 8.16206L5 17.4758V18.89H6.41421L15.7279 9.57627ZM17.1421 8.16206L18.5563 6.74785L17.1421 5.33363L15.7279 6.74785L17.1421 8.16206ZM7.24264 20.89H3V16.6473L16.435 3.21231C16.8256 2.82179 17.4587 2.82179 17.8492 3.21231L20.6777 6.04074C21.0682 6.43126 21.0682 7.06443 20.6777 7.45495L7.24264 20.89Z"></path></svg>
+                </a>
+                HTML;
+                }),
+            $this->field('name')
+                ->label('Name'),
+
+            $this->field('date')
+                ->label('Date')
+                ->value(function ($row) {
+                    return $row->date->format('d M');
+                })
+                ->sortable(),
+            // created at
+            $this->field('created_at')
+                ->label('Created At')
+                ->value(function ($row) {
+                    return $row->created_at->format('d M, Y');
+                })
+                ->sortable(),
+
+            $this->field('updated_at')
+                ->label('Ppdated At')
+                ->value(function ($row) {
+                    return $row->updated_at->format('d M, Y');
+                })
+                ->sortable(),
+        ];
+    }
+}
