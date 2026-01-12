@@ -1,7 +1,7 @@
 
 
 # Team Management App (v1)
-
+working on [v2](https://github.com/joydeep-bhowmik/team-managment-app-v2)
 A production-ready **Team Management System** built with **Laravel**, designed for managing teams, users, attendance/check-ins, and push notifications using **Firebase Cloud Messaging (FCM)**.
 
 This application is configured for database-backed sessions, queues, and caching, making it suitable for real-world internal team operations.
