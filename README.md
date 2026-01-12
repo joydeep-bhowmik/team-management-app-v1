@@ -6,6 +6,15 @@ A production-ready **Team Management System** built with **Laravel**, designed f
 
 This application is configured for database-backed sessions, queues, and caching, making it suitable for real-world internal team operations.
 
+## Previews
+
+![Screenshot 1](previews/Screenshot%202026-01-12%20152438.png)
+![Screenshot 2](previews/Screenshot%202026-01-12%20152459.png)
+![Screenshot 3](previews/Screenshot%202026-01-12%20152656.png)
+![Screenshot 4](previews/Screenshot%202026-01-12%20152718.png)
+![Screenshot 5](previews/Screenshot%202026-01-12%20152749.png)
+![Screenshot 6](previews/Screenshot%202026-01-12%20152808.png)
+
 ---
 
 ## 🚀 Features
